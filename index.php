@@ -1,0 +1,780 @@
+<?php
+// Макросы, которые Keitaro предоставляет напрямую
+// Эти значения будут заменены Keitaro при обработке страницы
+$macros = [
+  'mksite' => '{mksite}',
+  'mkcampaign' => '{mkcampaign}',
+  'subid' => isset($_GET['subid']) && $_GET['subid'] !== '' ? $_GET['subid'] : '{subid}',
+  'fbclid' => '{fbclid}',
+  'pixel' => '{pixel}',
+  'phone' => '{_phone}',
+  'insured_answer' => 'No', // Будет обновлено при выборе
+  'homeowner_answer' => 'No', // Будет обновлено при выборе
+  'utm_campaign' => '{campaign.name}',
+  'utm_source' => '{site_source_name}',
+  'utm_placement' => '{placement}',
+  'campaign_id' => '{campaign.id}',
+  'adset_id' => '{adset.id}',
+  'ad_id' => '{ad.id}',
+  'adset_name' => '{adset.name}',
+  'offerlink' => '{offerlink}'
+];
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page para servicio Pay Per Call relacionado con deudas en España">
+  <title>Cut Up to 70% on Your Auto Insurance </title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="assets/bootstrap-icons.css" rel="stylesheet">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="assets/styles.css" rel="stylesheet">
+  <!-- FF Pro Universal Tag -->
+  <script>
+    // Lumetric tracking - отключен из-за недоступности домена
+    window.flux = {
+      track: function() {
+        // Пустая функция для предотвращения ошибок
+        console.log('Lumetric tracking disabled');
+      }
+    };
+  </script>
+  <!-- FF Pro View Event -->
+  <script>
+    if (typeof flux !== 'undefined') {
+      flux.track("view")
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16674691485"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-16674691485');
+  </script>
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '<?php echo $macros['pixel']; ?>');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=<?php echo $macros['pixel']; ?>&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <script src="assets/script/jquery.min.js"></script>
+
+
+
+  <!-- Hotjar Tracking Code for Auto insurance / Facebook / Quiz / v5 -->
+  <script>
+    (function(h, o, t, j, a, r) {
+      h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 6444832,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+  <!-- Do Not Qualify Redirect Start -->
+  <script>
+    // ОТКЛЮЧЕН: Автоматическое перенаправление удалено - теперь всегда показываем номер телефона
+    // $(document).ready(function () {
+    //     var targetNode = document.getElementById('dontqualify');
+    //     var observer = new MutationObserver(function (mutationsList) {
+    //         for (let mutation of mutationsList) {
+    //             if (mutation.attributeName === 'style') {
+    //                 if ($('#dontqualify').is(':visible')) {
+    //                     window.location.href = "https://usfinanceexpert.com/fstHR72F";
+    //                 }
+    //             }
+    //         }
+    //     });
+    //     observer.observe(targetNode, { attributes: true });
+    // });
+  </script>
+  <!-- Do Not Qualify Redirect End -->
+
+  <style type="text/css">
+    @font-face {
+      font-family: 'Atlassian Sans';
+      font-style: normal;
+      font-weight: 400 653;
+      font-display: swap;
+      src: local('AtlassianSans'), local('Atlassian Sans Text'), url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/AtlassianSans-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+
+  <!-- Hello -->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PTNJ8J8L');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+
+</head><!-- Barra de contador - Añadir justo después de <body> -->
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTNJ8J8L"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="text-center py-2 mb-0 rounded-0"
+    style="background-color: #FFD814; color: black; font-weight: bold; border: none; font-size: clamp(12px, 2vw, 18px);">
+    <div class="container d-flex align-items-center justify-content-center">
+      <!-- 5 estrellas verdes con borde blanco -->
+      <div class="me-2" style="display: inline-flex; gap: 3px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#28a745" stroke="#ffffff" stroke-width="1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z">
+          </path>
+        </svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#28a745" stroke="#ffffff" stroke-width="1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z">
+          </path>
+        </svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#28a745" stroke="#ffffff" stroke-width="1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z">
+          </path>
+        </svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#28a745" stroke="#ffffff" stroke-width="1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z">
+          </path>
+        </svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#28a745" stroke="#ffffff" stroke-width="1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z">
+          </path>
+        </svg>
+      </div>
+      <span class="me-1"
+        style="color: #000; font-weight: 500; font-size: 0.90rem;">Helped 17,250,579 Americans</span> <span
+        class="me-1" style="font-size: 0.9rem;"></span>
+    </div>
+  </div>
+  
+  
+  <div class="container" style="max-width: 800px;">
+    <!-- Quiz Section -->
+    <section id="quiz" class="container my-2">
+      <div class="text-center mb-3">
+        
+        
+        <h1 id="headline" class="fw-bold text-black" style="margin-top: 10px;">
+          Save Up to <span class="text-danger">$529/Year</span> on Full Coverage Auto Insurance – Get Your Best Rate!
+        </h1>
+        
+        <script>
+          (function() {
+            var defaultText = 'Save Up to <span class="text-danger">$529/Year</span> on Full Coverage Auto Insurance – Get Your Best Rate!';
+            var el = document.getElementById("headline");
+        
+            // Function to read URL parameter by name
+            function getQueryParam(name) {
+              var params = new URLSearchParams(window.location.search);
+              return params.get(name);
+            }
+        
+            function setHeadline() {
+              var headlineParam = getQueryParam("headline"); // get ?headline=
+              if (headlineParam && headlineParam.trim() !== "") {
+                el.innerHTML = decodeURIComponent(headlineParam);
+              } else {
+                el.innerHTML = defaultText;
+              }
+            }
+        
+            // Run immediately
+            setHeadline();
+          })();
+        </script>
+          
+          
+          
+        <hr class="my-1">
+        <!--<img src="img/oportunidad-calificar.jpg" alt="Oportunidad para calificar" class="img-fluid mb-3" style="max-width: 100%; height: auto;">-->
+        <p class="text-center" style="font-size: 1.2rem;">This is your chance to qualify! Take advantage of this
+          <strong>New Safe Driver Incentive Program</strong> while it's available. <span class="text-primary">
+            <strong>Act now!</strong> </span>
+        </p>
+        <p> <strong>Take this quiz for free - It will only take 2 minutes.</strong> <br>
+          <strong style="color: red;">Last spots available.</strong>
+        </p>
+      </div>
+      
+      <div class="cards">
+        <div class="question" id="q0">
+          <h3 class="text-center">What is your current insurance carrier?</h3>
+          <div class="row">
+            <div class="col-6">
+              <div name="insurance_carrier" value="Allstate" class="button q0-btn card_submit">Allstate</div>
+              <div name="insurance_carrier" value="GEICO" class="button q0-btn card_submit">GEICO</div>
+              <div name="insurance_carrier" value="Other" class="button q0-btn card_submit">Other</div>
+            </div>
+            <div class="col-6">
+              <div name="insurance_carrier" value="State Farm" class="button q0-btn card_submit">State Farm</div>
+              <div name="insurance_carrier" value="Progressive" class="button q0-btn card_submit">Progressive</div>
+              <div name="insurance_carrier" value="N" class="button q0-btn card_submit not_bt">Not insured</div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- New Payment Question -->
+        <div class="question" id="q1-payment" style="display: none;">
+          <h3 class="text-center" id="payment-question-title">
+            How much are you currently paying for your insurance for 1 car?
+          </h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="button q1-payment-btn card_submit">Under $50</div>
+              <div class="button q1-payment-btn card_submit">$100-$149</div>
+              <div class="button q1-payment-btn card_submit">$200-$299</div>
+            </div>
+            <div class="col-6">
+              <div class="button q1-payment-btn card_submit">$50-$99</div>
+              <div class="button q1-payment-btn card_submit">$150-$199</div>
+              <div class="button q1-payment-btn card_submit">Over $300</div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Homeowner Question -->
+        <div class="question" id="q1">
+          <h3 class="text-center">Do you own or rent your home?</h3>
+          <div class="row">
+            <div class="col-6">
+              <div name="homeowner" value="Yes" class="button q1-btn card_submit">Own</div>
+            </div>
+            <div class="col-6">
+              <div name="homeowner" value="No" class="button q1-btn card_submit">Rent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Mensajes de validación ocultos inicialmente -->
+      <div class="quiz-container" id="validation-messages" style="display: none;">
+        <div class="loading-spinner"></div>
+        <div class="mt-3">
+          <p class="validation-message"></p>
+        </div>
+      </div>
+      <!-- Resultado oculto inicialmente -->
+      <div class="quiz-container" id="quiz-result" style="display: none;">
+        <h3 class="text-primary fw-bold"> <span style="color: #198754; font-size: 24px;">✅ Congratulations!</span><br>
+          <span style="font-size: 20px;">Qualify for $39/Month Auto Insurance.</span>
+        </h3>
+        <!-- Agregar el número de solicitud aquí -->
+        <p class="text-dark fw-bold mt-2">Your application number is: <span id="solicitud-numero"></span> </p>
+        <div class="mt-4"> <a href="tel:18552351844"
+            class="btn btn-success btn-lg d-flex align-items-center justify-content-center"
+            onclick="gtag_report_conversion();" style="
+       padding-top: 18px;
+       padding-bottom: 18px;
+       border: 2px solid white;
+       outline: 2px solid #28a745;
+       box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+       position: relative;
+       font-size: 1.2rem;
+     "> <i class="icon-animate fs-2 me-2">📞</i> <?php echo $macros['phone']; ?> </a> </div>
+        <p class="text-danger fw-bold mt-3"> Attention! <strong>Agents are only available for a few
+            minutes.</strong><br>
+          <br>
+          <span class="text-dark"> <strong>click</strong> To claim your discount before program ends: </span>
+        </p>
+        <p id="spot-message" class="lead fw-bold text-center"
+          style="background-color: #d8e8ff; padding: 10px; border-radius: 5px; margin-top: 15px; font-size: 0.9rem;">
+          Your place is reserved by <span id="countdown">2:34</span> minutes </p>
+        <br>
+        <p class="text-muted mt-3" style="font-size: 13px;"> *Limited availability. Applications close soon. </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Logos de confianza -->
+  <div class="text-center mt-3 mb-4">
+    <p class="text-muted mb-2" style="font-size: 0.7rem; font-weight: 600;">Seen in the media</p>
+    <img src="assets/brands2.png" alt="Medios de confianza" class="img-fluid" style="max-width: 300px; opacity: 0.9;">
+  </div>
+
+  <!-- Testimonial 1 (Original) -->
+  <div class="testimonial d-flex align-items-center p-4"
+    style="max-width: 800px; margin: 0 auto; border-radius: 10px; margin-bottom: 5px;"> <img
+      src="assets/testimonial1.png" alt="Foto del cliente" class="rounded-circle me-3"
+      style="width: 100px; height: 100px; object-fit: cover;">
+    <div>
+      <p class="fst-italic mb-2" style="font-size: 1rem;"> "I used to pay $217/month for car insurance. Now I only pay
+        $67 with full coverage! I thought switching would be complicated, but the agent was clear, patient, and honest.
+        <strong>I recommend calling right away!</strong>"
+      </p>
+      <!-- Estrellas doradas sobre fondo blanco -->
+      <div class="d-flex justify-content-start mb-2" style="gap: 5px;">
+        <!-- Estrella 1 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 2 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 3 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 4 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 5 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+      </div>
+      <h6 class="fw-bold mb-0">Sarah A. Smythe – Dallas, TX</h6>
+    </div>
+  </div>
+  <!-- Divider -->
+  <div style="max-width: 800px; height: 1px; margin: 1px 0; opacity: 0;"></div>
+  <!-- Testimonial 2 (Nuevo) -->
+  <div class="testimonial d-flex align-items-center p-4"
+    style="max-width: 800px; margin: 0 auto; border-radius: 10px; margin-bottom: 5px;"> <img
+      src="assets/testimonial.png" alt="Foto de Peter J. Lewis" class="rounded-circle me-3"
+      style="width: 100px; height: 100px; object-fit: cover;">
+    <div>
+      <p class="fst-italic mb-2" style="font-size: 1rem;"> "I was overpaying for years. They helped me save over $150 a
+        month without changing my coverage. Everything was quick, easy, and no pressure <strong>I called, and it was the
+          best thing I ever did!</strong>"</p>
+      <!-- Estrellas doradas sobre fondo blanco -->
+      <div class="d-flex justify-content-start mb-2" style="gap: 5px;">
+        <!-- Estrella 1 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 2 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 3 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 4 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 5 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+      </div>
+      <h6 class="fw-bold mb-0">Peter J. Lewis – Miami, FL</h6>
+    </div>
+  </div>
+  <!-- Divider -->
+  <div style="max-width: 800px; height: 1px; margin: 1px 0; opacity: 0;"></div>
+  <!-- Testimonial 3 (Nuevo) -->
+  <div class="testimonial d-flex align-items-center p-4" style="max-width: 800px; margin: 0 auto; border-radius: 10px;">
+    <img src="assets/testimonial2.png" alt="Foto de Flossie R. Brown" class="rounded-circle me-3"
+      style="width: 100px; height: 100px; object-fit: cover;">
+    <div>
+      <p class="fst-italic mb-2" style="font-size: 1rem;">"I waited too long. When I finally called, they explained
+        everything and helped me cut my premium nearly in half <strong>If you're thinking about it, do it now.</strong>"
+      </p>
+      <!-- Estrellas doradas sobre fondo blanco -->
+      <div class="d-flex justify-content-start mb-2" style="gap: 5px;">
+        <!-- Estrella 1 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 2 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 3 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 4 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+        <!-- Estrella 5 -->
+        <div
+          style="background-color: #fff; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: 1px solid #ddd;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700" width="18" height="18">
+            <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.787 
+            1.527 8.204-7.463-4.03L4.537 23.3l1.527-8.204-6.064-5.787 
+            8.332-1.151z"></path>
+          </svg>
+        </div>
+      </div>
+      <h6 class="fw-bold mb-0">Flossie R. Brown – Phoenix, AZ</h6>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <ul class="list-inline mb-3">
+        <li class="list-inline-item"> <a href="https://luxeeloomm.com/" class="text-white">Start</a> </li>
+        <li class="list-inline-item"> <a href="https://luxeeloomm.com/aplica/privacy-policy.html"
+            class="text-white">Privacy Policy</a> </li>
+        <li class="list-inline-item"> <a href="https://luxeeloomm.com/aplica/terms-of-services.html"
+            class="text-white">Terms of Services</a> </li>
+        <li class="list-inline-item"> <a href="https://luxeeloomm.com/aplica/contact-us.html" class="text-white">Contact
+            us</a> </li>
+      </ul>
+      <p class="small text-white" style="max-width: 600px; margin: 0 auto;">This website is for informational purposes
+        only and does not constitute legal, tax, or financial advice. The information provided does not guarantee
+        specific results, and results may vary based on individual circumstances. We are not a law firm or government
+        entity. We recommend consulting with a qualified professional before making financial decisions. By using this
+        site, you agree that any action taken is at your own risk. </p>
+      <p class="text-white">© 2025 All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Bootstrap 5 JS -->
+  <script src="assets/bootstrap.bundle.min.js"></script>
+  <script src="assets/scripts.js"></script>
+  <!-- Event snippet for Calls conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function() {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16674691485/8NGQCPif_PcZEJ2zjo8-',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      // Инициализация обработчиков событий уже добавлена ниже
+    });
+
+    // JavaScript переменные с макросами для передачи на thank-you.php
+    // Keitaro заменит эти макросы на реальные значения
+    var subid = getUrlParameter('subid') || "{subid}";
+    var mksite = "{mksite}";
+    var fbclid = "{fbclid}";
+    var mkcampaign = "{mkcampaign}";
+    var pixel = "{pixel}";
+    var phone = "{_phone}";
+    // var utm_campaign = "{campaign.name}";
+    // var utm_source = "{site_source_name}";
+    // var utm_placement = "{placement}";
+    // var campaign_id = "{campaign.id}";
+    // var adset_id = "{adset.id}";
+    // var ad_id = "{ad.id}";
+    // var adset_name = "{adset.name}";
+    var utm_campaign = getUrlParameter('utm_campaign') || getUrlParameter('campaign.name') || '';
+    var utm_source = getUrlParameter('utm_source') || getUrlParameter('site_source_name') || '';
+    var utm_medium = getUrlParameter('utm_medium') || getUrlParameter('ad.name') || '';
+    var utm_term = getUrlParameter('utm_term') || '';
+    var utm_content = getUrlParameter('utm_content') || '';
+
+    var utm_placement = getUrlParameter('utm_placement') || getUrlParameter('placement') || '';
+    var campaign_id = getUrlParameter('campaign_id') || getUrlParameter('campaign.id') || '';
+    var adset_id = getUrlParameter('adset_id') || getUrlParameter('adset.id') || '';
+    var ad_id = getUrlParameter('ad_id') || getUrlParameter('ad.id') || '';
+    var adset_name = getUrlParameter('adset_name') || getUrlParameter('adset.name') || '';
+    var offerlink     = getUrlParameter('offerlink') || '';  // ✅ Added offerlink here
+
+
+
+    // Переменные для отслеживания вопросов и ответов
+    var quizCurrentQuestion = 0;
+    var insuranceCarrierAnswer = '';
+    var insuredAnswer = 'No';
+    var homeownerAnswer = 'No';
+
+    // Функция для получения параметров из URL
+    function getUrlParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+
+
+    // Функция для обработки ответа на вопрос
+    function handleAnswer(answer) {
+      if (quizCurrentQuestion === 0) {
+        insuranceCarrierAnswer = answer;
+    
+        // ✅ Fix insured answer for "Not insured"
+        if (answer === 'N') {
+          insuredAnswer = 'No';   // instead of "N"
+        } else {
+          insuredAnswer = 'Yes';
+        }
+    
+        quizCurrentQuestion = 1;
+    
+      } else if (quizCurrentQuestion === 1) {
+        homeownerAnswer = answer;
+    
+        setTimeout(function() {
+          var subid3 = insuranceCarrierAnswer;  
+        
+          // ✅ New condition: Allstate → redirect to tracking link
+          if (insuranceCarrierAnswer === "Allstate") {
+            // Use offerlink if available, otherwise fallback to default
+            var base_url = offerlink && offerlink !== '' 
+                ? offerlink 
+                : "https://trkmcl.com/5v4we7l4xk/274m5egeng";
+        
+            var url = base_url +
+                "?subid="  + encodeURIComponent(subid) +
+                "&subid1=" + encodeURIComponent(homeownerAnswer) +
+                "&subid2=" + encodeURIComponent(insuredAnswer) +
+                "&subid3=" + encodeURIComponent(subid3);
+        
+            window.location.href = url;
+            return; // stop execution (don’t go to thank-you.php)
+        }
+
+    
+          // Default behavior for other carriers
+          var url = 'thank-you.php?insured=' + encodeURIComponent(insuredAnswer) +
+            '&insurance_carrier=' + encodeURIComponent(insuranceCarrierAnswer) +
+            '&subid=' + encodeURIComponent(subid) +
+            '&subid2=' + encodeURIComponent(insuredAnswer) +
+            '&subid3=' + encodeURIComponent(subid3) +
+            '&homeowner=' + encodeURIComponent(homeownerAnswer) +
+            '&fbclid=' + encodeURIComponent(fbclid) +
+            '&mksite=' + encodeURIComponent(mksite) +
+            '&mkcampaign=' + encodeURIComponent(mkcampaign) +
+            '&pixel=' + encodeURIComponent(pixel) +
+            '&phone=' + encodeURIComponent(phone) +
+            '&utm_campaign=' + encodeURIComponent(utm_campaign) +
+            '&utm_source=' + encodeURIComponent(utm_source) +
+            '&utm_medium=' + encodeURIComponent(utm_medium) +
+            '&utm_term=' + encodeURIComponent(utm_term) +
+            '&utm_content=' + encodeURIComponent(utm_content) +
+            '&utm_placement=' + encodeURIComponent(utm_placement) +
+            '&campaign_id=' + encodeURIComponent(campaign_id) +
+            '&adset_id=' + encodeURIComponent(adset_id) +
+            '&ad_id=' + encodeURIComponent(ad_id) +
+            '&adset_name=' + encodeURIComponent(adset_name) +
+            '&offerlink=' + encodeURIComponent(offerlink); // ✅ Added offerlink here
+    
+          window.location.href = url;
+        }, 500);
+      }
+    }
+
+
+    // Обработчики событий для кнопок
+    $(document).ready(function () {
+    $('.q0-btn').on('click', function () {
+      var answer = $(this).attr('value');
+      $('.q0-btn').removeClass('selected');
+      $(this).addClass('selected');
+      handleAnswer(answer);
+  
+      $('#q0').fadeOut(500, function () {
+        // Show payment question
+        if (answer === 'N') {
+          $('#payment-question-title').text('How much are you looking to pay for your insurance for 1 car?');
+        } else {
+          $('#payment-question-title').text('How much are you currently paying for your insurance for 1 car?');
+        }
+        $('#q1-payment').fadeIn(500);
+      });
+    });
+  
+    // When user selects payment option → go to homeowner question
+    $('.q1-payment-btn').on('click', function () {
+      $('#q1-payment').fadeOut(500, function () {
+        $('#q1').fadeIn(500);
+      });
+    });
+  
+    $('.q1-btn').on('click', function () {
+      var answer = $(this).attr('value');
+      $('#q1').fadeOut(500);
+      handleAnswer(answer);
+    });
+  });
+
+
+    var timer2 = '5:01';
+    var interval = setInterval(function() {
+      var timer = timer2.split(':');
+      var minutes = parseInt(timer[0], 10);
+      var seconds = parseInt(timer[1], 10);
+      --seconds;
+      minutes = seconds < 0 ? --minutes : minutes;
+      if (minutes < 0) clearInterval(interval);
+      seconds = seconds < 0 ? 59 : seconds;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      $('.countdown').html(minutes + ':' + seconds);
+      timer2 = minutes + ':' + seconds;
+    }, 1000);
+  </script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="assets/script/scripts.js"></script>
+  <script>
+    // Исправляем ошибку в scripts.js
+    $(document).ready(function() {
+      // Проверяем существование элемента перед обращением к нему
+      if (document.getElementById('quiz-progress')) {
+        const progress = document.getElementById('quiz-progress');
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        if (isMobile) {
+          progress.style.width = '7%';
+          progress.textContent = '0%';
+        } else {
+          progress.style.width = '4%';
+          progress.textContent = '0%';
+        }
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

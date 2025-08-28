@@ -1,0 +1,14 @@
+# Запрещаем доступ к файлам логов
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Запрещаем просмотр содержимого папки
+Options -Indexes
+
+# Запрещаем выполнение PHP файлов
+<Files "*.php">
+    Order allow,deny
+    Deny from all
+</Files>
