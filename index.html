@@ -1,25 +1,4 @@
-<?php
-// Макросы, которые Keitaro предоставляет напрямую
-// Эти значения будут заменены Keitaro при обработке страницы
-$macros = [
-  'mksite' => '{mksite}',
-  'mkcampaign' => '{mkcampaign}',
-  'subid' => isset($_GET['subid']) && $_GET['subid'] !== '' ? $_GET['subid'] : '{subid}',
-  'fbclid' => '{fbclid}',
-  'pixel' => '{pixel}',
-  'phone' => '{_phone}',
-  'insured_answer' => 'No', // Будет обновлено при выборе
-  'homeowner_answer' => 'No', // Будет обновлено при выборе
-  'utm_campaign' => '{campaign.name}',
-  'utm_source' => '{site_source_name}',
-  'utm_placement' => '{placement}',
-  'campaign_id' => '{campaign.id}',
-  'adset_id' => '{adset.id}',
-  'ad_id' => '{ad.id}',
-  'adset_name' => '{adset.name}',
-  'offerlink' => '{offerlink}'
-];
-?>
+
 <!DOCTYPE html>
 
 <html lang="en">
